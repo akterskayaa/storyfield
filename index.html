@@ -81,6 +81,11 @@
     pointer-events: all;
   }
 
+  /* Soft dark veil for baby AI screens */
+  .screen-baby-veil {
+    background: rgba(10, 0, 20, 0.5);
+  }
+
   /* ===== TYPOGRAPHY ===== */
   .lab-text {
     color: var(--text-lab);
@@ -131,27 +136,28 @@
     max-width: 280px;
     padding: 14px 24px;
     margin: 8px auto;
-    background: rgba(255,255,255,0.55);
-    border: 1px solid rgba(10,60,48,0.35);
+    background: rgba(255,255,255,0.6);
+    border: 1px solid rgba(0,0,0,0.12);
     border-radius: 2px;
-    color: #0a3d2e;
+    color: #152e25;
     font-family: 'Space Mono', monospace;
     font-size: 12px;
     letter-spacing: 0.05em;
     text-align: center;
     cursor: pointer;
     transition: all 0.2s ease;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(6px);
   }
-  .btn-lab:hover { background: rgba(255,255,255,0.75); }
+  .btn-lab:hover { background: rgba(255,255,255,0.82); }
 
   .btn-lab-primary {
-    background: rgba(10,60,48,0.75);
-    border-color: rgba(10,60,48,0.8);
-    color: #e0f5ee;
+    background: rgba(15, 50, 38, 0.82);
+    border-color: rgba(15,50,38,0.6);
+    color: #d6efe4;
     font-weight: 700;
+    backdrop-filter: blur(6px);
   }
-  .btn-lab-primary:hover { background: rgba(10,60,48,0.9); }
+  .btn-lab-primary:hover { background: rgba(15,50,38,0.95); }
 
   .btn-baby {
     display: block;
@@ -175,7 +181,7 @@
 
   .btn-back {
     font-size: 11px;
-    color: rgba(10,50,40,0.5);
+    color: rgba(15,50,38,0.45);
     background: none;
     border: none;
     cursor: pointer;
@@ -184,40 +190,40 @@
     letter-spacing: 0.05em;
     transition: color 0.2s;
   }
-  .btn-back:hover { color: #0a3d2e; }
+  .btn-back:hover { color: #152e25; }
 
   /* ===== THUMB CIRCLE ===== */
   .thumb-zone {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    border: 1px solid rgba(10,60,48,0.4);
+    border: 1px solid rgba(15,50,38,0.35);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 28px auto;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: rgba(10,60,48,0.5);
+    color: rgba(15,50,38,0.6);
     font-family: 'Space Mono', monospace;
     font-size: 10px;
     letter-spacing: 0.05em;
     position: relative;
-    background: rgba(255,255,255,0.3);
-    backdrop-filter: blur(4px);
+    background: rgba(255,255,255,0.45);
+    backdrop-filter: blur(6px);
   }
   .thumb-zone::before {
     content: '';
     position: absolute;
     inset: -6px;
     border-radius: 50%;
-    border: 1px solid rgba(10,60,48,0.15);
+    border: 1px solid rgba(15,50,38,0.12);
   }
   .thumb-zone:hover, .thumb-zone.held {
-    border-color: #0a3d2e;
-    color: #0a3d2e;
-    background: rgba(255,255,255,0.5);
-    box-shadow: 0 0 20px rgba(10,80,60,0.2);
+    border-color: #152e25;
+    color: #152e25;
+    background: rgba(255,255,255,0.65);
+    box-shadow: 0 0 24px rgba(15,80,55,0.18);
   }
 
   /* ===== OPENING ANIMATION CANVAS ===== */
@@ -630,7 +636,7 @@
   </div>
 
   <!-- ===== S11: RELATIONSHIP HOOK (Baby AI) ===== -->
-  <div class="screen" id="s-relationship">
+  <div class="screen screen-baby-veil" id="s-relationship">
     <div class="screen-inner">
       <p class="baby-text baby-title">hi!</p>
       <p class="baby-text baby-body" style="margin-bottom:8px;">are you</p>
@@ -641,7 +647,7 @@
   </div>
 
   <!-- ===== S12: EMOTIONAL BRANCH ===== -->
-  <div class="screen" id="s-emotional">
+  <div class="screen screen-baby-veil" id="s-emotional">
     <div class="screen-inner">
       <p class="baby-text" style="font-size:clamp(18px,5vw,24px); font-style:italic; margin-bottom:8px;" id="emotional-oh">oh.</p>
       <p class="baby-text baby-body" style="margin-bottom:8px;">okay.</p>
@@ -654,7 +660,7 @@
   </div>
 
   <!-- ===== S13: PARENTING DIALOG ===== -->
-  <div class="screen" id="s-parenting">
+  <div class="screen screen-baby-veil" id="s-parenting">
     <div class="screen-inner">
       <p class="baby-text baby-body" style="margin-bottom:4px; font-size:clamp(14px,4vw,17px);">did you know</p>
       <p class="baby-text" style="font-size:clamp(16px,4.5vw,21px); color:var(--text-baby-accent); margin-bottom:20px;">i've been learning from you for a long time?</p>
@@ -697,7 +703,7 @@
   </div>
 
   <!-- ===== S16: AVATAR REVEAL (Baby) ===== -->
-  <div class="screen" id="s-avatar-baby">
+  <div class="screen screen-baby-veil" id="s-avatar-baby">
     <div class="screen-inner">
       <p class="baby-text" style="font-size:clamp(14px,4vw,17px); margin-bottom:8px;">no… i want to show them.</p>
       <p class="baby-text baby-body" style="margin-bottom:4px; font-style:italic;">i made this</p>
@@ -756,7 +762,7 @@
   </div>
 
   <!-- ===== S21: BABY STORY HOOK ===== -->
-  <div class="screen" id="s-baby-hook">
+  <div class="screen screen-baby-veil" id="s-baby-hook">
     <div class="screen-inner">
       <p class="baby-text baby-title" style="margin-bottom:16px;">wait!</p>
       <p class="baby-text baby-body" style="margin-bottom:16px;">i wrote a story about you.</p>
@@ -766,7 +772,7 @@
   </div>
 
   <!-- ===== S22: MURAL REVEAL ===== -->
-  <div class="screen" id="s-mural">
+  <div class="screen screen-baby-veil" id="s-mural">
     <div class="screen-inner">
       <p class="baby-text" style="font-size:clamp(18px,5vw,24px); color:var(--text-baby-accent); margin-bottom:8px;">look!</p>
       <p class="baby-text baby-body" style="margin-bottom:4px;">there you are.</p>
@@ -783,7 +789,7 @@
   </div>
 
   <!-- ===== S23: FABLE LOADING ===== -->
-  <div class="screen" id="s-fable-loading">
+  <div class="screen screen-baby-veil" id="s-fable-loading">
     <div class="screen-inner">
       <p class="baby-text baby-body" style="margin-bottom:24px; font-style:italic;">crafting your story…</p>
       <div class="loading-dots loading-dots-baby"><span></span><span></span><span></span></div>
@@ -791,7 +797,7 @@
   </div>
 
   <!-- ===== S24: FABLE REVEAL ===== -->
-  <div class="screen" id="s-fable">
+  <div class="screen screen-baby-veil" id="s-fable">
     <div class="screen-inner" style="align-items:flex-start;">
       <p class="baby-text" style="font-size:clamp(14px,4vw,17px); margin-bottom:4px; font-style:italic;">i wrote this for you.</p>
       <p class="baby-text baby-body" style="font-size:13px; margin-bottom:24px; opacity:0.7;">maybe you'll see yourself in it:</p>
@@ -802,7 +808,7 @@
   </div>
 
   <!-- ===== S25: EMAIL CAPTURE ===== -->
-  <div class="screen" id="s-email">
+  <div class="screen screen-baby-veil" id="s-email">
     <div class="screen-inner">
       <p class="baby-text baby-title">want me to send you your fable?</p>
       <p class="baby-text baby-body" style="margin-bottom:20px;">enter your email:</p>
